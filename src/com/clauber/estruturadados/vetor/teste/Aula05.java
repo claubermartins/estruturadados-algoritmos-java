@@ -2,7 +2,7 @@ package com.clauber.estruturadados.vetor.teste;
 
 import com.clauber.estruturadados.vetor.Vetor;
 
-public class Aula04 {
+public class Aula05 {
 
 	public static void main(String[] args) {
 
@@ -16,9 +16,8 @@ public class Aula04 {
 			e.printStackTrace();
 		}
 
-		System.out.println(vetor.tamanho());
+		System.out.println(vetor.busca(-1));
 
-		System.out.println(vetor.toString());
 	}
 
 }

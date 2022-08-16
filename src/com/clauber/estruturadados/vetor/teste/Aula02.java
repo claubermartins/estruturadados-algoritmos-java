@@ -4,12 +4,12 @@ import com.clauber.estruturadados.vetor.Vetor;
 
 public class Aula02 {
 
-    public static void main(String[] args){
+	public static void main(String[] args) {
 
-        Vetor vetor = new Vetor(5);
+		Vetor vetor = new Vetor(5);
 
-        int i = 0;
+		int i = 0;
 
-        i++;
-    }
+		i++;
+	}
 }
