@@ -40,6 +40,16 @@ public class Vetor {
 		}
 		return this.elementos[posicao];
 	}
+	
+	public int busca(String elemento) throws Exception {
+		for (int i=0; i<this.tamanho; i++) {
+			if (this.elementos[i].equals(elemento)) {
+				return i;
+			}
+		}
+		throw new Exception("O vetor não existe");
+		
+	}
 
 	@Override
 	public String toString() {
