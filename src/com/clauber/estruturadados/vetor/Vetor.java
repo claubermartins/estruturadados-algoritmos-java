@@ -29,6 +29,20 @@ public class Vetor {
 			throw new Exception("O vetor já está cheio, não é possível adicionar mais elementos");
 		}
 	}
+	
+	public boolean adiciona(int posicao, String elemento) {
+		if (!(posicao >= 0 && posicao < tamanho)) {
+			throw new IllegalArgumentException("Posição inválida");
+		}
+		
+		//mover todos os elementos
+		for(int i=this.tamanho-1; i>=posicao; i--) {
+			this.elementos[i+1] = this.elementos[i];
+		}
+		this.elementos[posicao] = elemento;
+		this.tamanho++;
+		return true;
+	}
 
 	public int tamanho() {
 		return this.tamanho;
