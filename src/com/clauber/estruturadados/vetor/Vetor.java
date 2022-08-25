@@ -29,13 +29,13 @@ public class Vetor {
 			this.elementos[this.tamanho] = elemento;
 			this.tamanho++;
 		} else {
-			throw new Exception("O vetor já está cheio, não é possível adicionar mais elementos");
+			throw new Exception("O vetor jï¿½ estï¿½ cheio, nï¿½o ï¿½ possï¿½vel adicionar mais elementos");
 		}
 	}
 	
 	public boolean adiciona(int posicao, String elemento) {
 		if (!(posicao >= 0 && posicao < tamanho)) {
-			throw new IllegalArgumentException("Posição inválida");
+			throw new IllegalArgumentException("Posiï¿½ï¿½o invï¿½lida");
 		}
 		this.aumentaCapacidade();
 		
@@ -64,7 +64,7 @@ public class Vetor {
 
 	public String busca(int posicao) {
 		if (!(posicao >= 0 && posicao < tamanho)) {
-			throw new IllegalArgumentException("Posição inválida");
+			throw new IllegalArgumentException("Posiï¿½ï¿½o invï¿½lida");
 		}
 		return this.elementos[posicao];
 	}
@@ -75,8 +75,24 @@ public class Vetor {
 				return i;
 			}
 		}
-		throw new Exception("O vetor não existe");
+		throw new Exception("O vetor nÃ£o existe");
 		
+	}
+	
+	
+	//B G D E F -> posiÃ§Ã£o a ser removida Ã© 1 (G)
+	//0 1 2 3 4 -> tamanho Ã© 5
+	//VETOR[1] = VETOR[2]
+	//VETOR[2] = VETOR[3]
+	//VETOR[3] = VETOR[4]
+	public void remove(int posicao) {
+		if (!(posicao >= 0 && posicao < tamanho)) {
+			throw new IllegalArgumentException("Posiï¿½ï¿½o invï¿½lida");
+		}
+		for(int i=posicao; i<this.tamanho-1; i++) {
+			this.elementos[i] = this.elementos[i+1];
+		}
+		this.tamanho--;
 	}
 
 	@Override
