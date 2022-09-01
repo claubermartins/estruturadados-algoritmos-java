@@ -68,6 +68,17 @@ public class Lista<T> {
 		
 	}
 	
+	public boolean contem(T elemento) throws Exception {
+		
+//		int posicao = busca(elemento);
+//		if (posicao > -1) {
+//			return true;
+//		}
+//		return false;
+		
+		return busca(elemento) >= 0;
+	}
+	
 	
 	//B G D E F -> posição a ser removida é 1 (G)
 	//0 1 2 3 4 -> tamanho é 5
