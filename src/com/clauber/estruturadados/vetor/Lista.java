@@ -79,6 +79,16 @@ public class Lista<T> {
 		return busca(elemento) >= 0;
 	}
 	
+	public int ultimoIndice(T elemento) {
+		
+		int ultimaPosicao = -1;
+		for(int i=0; i<this.tamanho; i++) {
+			if (this.elementos[i].equals(elemento)) {
+				ultimaPosicao = i;
+			}
+		}
+		return ultimaPosicao;
+	}
 	
 	//B G D E F -> posição a ser removida é 1 (G)
 	//0 1 2 3 4 -> tamanho é 5
