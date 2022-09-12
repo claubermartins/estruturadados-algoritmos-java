@@ -104,6 +104,13 @@ public class Lista<T> {
 		}
 		this.tamanho--;
 	}
+	
+	public void remove(T elemento) throws Exception  {
+		int posicao = this.busca(elemento);
+		if (posicao >= 0) {
+			this.remove(posicao);
+		}
+	}
 
 	@Override
 	public String toString() {
