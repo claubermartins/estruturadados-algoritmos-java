@@ -51,7 +51,11 @@ public class Lista<T> {
 		return this.tamanho;
 	}
 
-	public Object busca(int posicao) {
+	public T obtem(int posicao) {
+		return this.busca(posicao);
+	}
+	
+	public T busca(int posicao) {
 		if (!(posicao >= 0 && posicao < tamanho)) {
 			throw new IllegalArgumentException("Posi��o inv�lida");
 		}
