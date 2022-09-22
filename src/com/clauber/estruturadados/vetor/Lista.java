@@ -9,6 +9,10 @@ public class Lista<T> {
 		this.elementos = (T[]) new Object[capacidade];
 		this.tamanho = 0;
 	}
+	
+	public Lista() {
+		this(10);
+	}
 
 	public void adiciona(T elemento) throws Exception {
 		
