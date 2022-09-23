@@ -19,4 +19,6 @@ public class Lista2<T> extends EstruturaEstatica<T> {
 	public boolean adiciona(int posicao, T elemento) {
 		return super.adiciona(posicao, elemento);
 	}
+	
+	
 }
